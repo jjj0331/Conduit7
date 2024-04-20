@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'conduit/home'
-  get "up" => "rails/health#show", as: :rails_health_check
+  root 'conduit#home'
 
+  get 'conduit/register', to:'conduit#register', as: :register
+  
 end
