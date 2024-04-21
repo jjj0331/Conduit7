@@ -7,12 +7,12 @@
           <a href="/login">Have an account?</a>
         </p>
 
-        <ul class="error-messages">
+        <%# <ul class="error-messages">
           <li>That email is already taken</li>
-        </ul>
+        </ul> %>
 
         <%= form_with(model: @user, url: create_path) do |f| %>
-
+          <%= render 'shared/error_messages' %>
           <fieldset class="form-group">
             <%= f.text_field :username, class: "form-control form-control-lg", placeholder: "Username" %>
           </fieldset>

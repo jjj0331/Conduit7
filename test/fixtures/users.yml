@@ -2,8 +2,8 @@
 
 one:
   username: MyString
-  email: MyString
+  email: mystring1
 
 two:
   username: MyString
-  email: MyString
+  email: mystring2
