@@ -1,13 +1,6 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  title: MyString
-  description: MyText
-  body: MyText
-  tagList: MyString
-
-two:
-  title: MyString
-  description: MyText
-  body: MyText
-  tagList: MyString
+article1:
+  id: 1
+  title: "Test Article"
+  description: "Test description"
+  body: "Test body"
+  user_id: 1

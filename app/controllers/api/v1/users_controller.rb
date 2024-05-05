@@ -1,9 +1,10 @@
 class Api::V1::UsersController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create, :login]
   
+# ユーザ作成  
   def create
     @user = User.new(user_params)
-    Rails.logger.debug @user
+
     if @user.save
       token = create_token(@user.id)
       render json: {user: {email: @user.email, token: token, username: @user.username}}

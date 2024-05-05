@@ -5,7 +5,6 @@ class CreateArticles < ActiveRecord::Migration[7.1]
       t.text :description
       t.text :body
       t.string :tagList, array: true, default: []
-
       t.timestamps
     end
   end
