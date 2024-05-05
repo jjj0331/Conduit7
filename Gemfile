@@ -8,6 +8,9 @@ gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 # 【追記】ハッシュかのため
 gem "bcrypt",          "3.1.18"
 
+gem 'jwt'
+gem 'rack-cors'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -68,3 +71,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+end
+

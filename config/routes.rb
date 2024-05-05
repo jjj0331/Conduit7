@@ -16,5 +16,22 @@ Rails.application.routes.draw do
   get 'conduit/profile/:id',to:'conduit#profile'
   get 'conduit/article/:id', to: 'conduit#article'
 
+  namespace :api do
+    namespace :v1 do
+      post '/users',       to: 'users#create'
+      post '/users/login', to: 'users#login'
+    end
+  end
 
+  namespace :api do
+    namespace :v1 do
+      get  '/api/user'           ,to: 'api#show'
+      post '/api/articles'       ,to: 'api#create'
+
+      get   '/api/articles/:id' ,to: 'api#get'
+      put   '/api/articles/:id' ,to: 'api#update'
+      delete'/api/articles/:id' ,to: 'api#delete'
+    end
+  end  
+  
 end
